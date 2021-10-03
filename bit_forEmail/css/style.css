@@ -1,0 +1,352 @@
+@import "reset.css";
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+h1, h2, h3, p, ul {
+     margin:0;
+     padding:0
+}
+ul li {list-style:none}
+a {text-decoration:none}
+.top_line {
+    float: left;
+    width: 100%;
+}
+.wrapper {
+    width: 700px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.top_line .wrapper {
+    background: #fff url(../images/f1.jpg) no-repeat 100% top;
+    min-height: 100px;
+}
+.logo_line {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+.descript {
+    font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+
+color: #000000;
+}
+.innblock {}
+h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.logo {
+    float: left;
+    margin-left: -24px;
+}
+.sect_one {
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+}
+h2 strong {
+color: #008DD2;}
+.sect_two {
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+}
+.descript_ul {
+    float: left;
+    width: 100%;
+}
+.descript_ul ul li {
+    
+}
+.w_im {}
+.w_text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    display: block;
+    padding-top: 7px;
+}
+ .w_im {
+    float: left;
+    margin-right: 10px;
+}
+.descript_ul ul li {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 5%;
+    margin-bottom: 20px;
+}
+.descript_ul.backs li {
+    float: left;
+    width: 100%;
+    background: url(../images/li.png) no-repeat 0 center;
+    min-height: 24px;
+    line-height: 24px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+}
+.sect_three {
+    float: left;
+    width: 100%;
+    
+}
+.sect_three .innblock {
+    float: left;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 70px;
+    background: url(../images/f2.jpg) no-repeat 100% top;
+}
+.sect_two {
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    z-index: 3;
+}
+.sect_three {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-top: -130px;
+}
+.sect_four {
+    float: left;
+    width: 100%;
+}
+.wrapper {
+    width: 600px;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.innblock {
+    float: left;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+.sect_four .wrapper {
+    background: #008DD2;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    height: 186px;
+    box-sizing: border-box;
+}
+.sect_three .innblock {
+    float: left;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 55px;
+    background: url(../images/f2.jpg) no-repeat 100% top;
+}
+.logo {
+    float: left;
+    margin-left: 40px;
+}
+h2.inverse {color:#fff}
+h2.inverse strong {color:#000}
+.descript_part_text {
+    font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+
+color: #FFFFFF;
+}
+.descript_part_cif {font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 59px;
+
+/* identical to box height */
+
+color: #0F76A8;}
+.descript_part_one {
+    float: left;
+    width: 50%;
+    padding-right: 5%;
+    box-sizing: border-box;
+}
+.descript_part_text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 40px;
+}
+.descript_part_cif {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    color: #0F76A8;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.descript_part_text {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 35px;
+    padding-top: 5px;
+
+}
+.sect_four .wrapper {
+    background: #008DD2;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    height: 175px;
+    box-sizing: border-box;
+}
+.sect_five .wrapper {
+    background: url(../images/f3.jpg) no-repeat right top;
+}
+.sect_five {
+    float: left;
+    width: 100%;
+}
+.sect_five .wrapper {
+    background: url(../images/f3.jpg) no-repeat right top;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    min-height: 310px;
+}
+.descript_ul.lims {}
+.descript_ul.lims li {
+    float: left;
+    width: 100%;
+    padding-right: 0;
+    font-size: 12px;
+    margin-bottom: 10px;
+    list-style: disc inside;
+    color: #008DD2;
+}
+.descript_ul.lims li span {
+   color: #000000;
+}
+.sect_five .wrapper {
+    background: url(../images/f3.jpg) no-repeat right top;
+    padding-top: 65px;
+    padding-bottom: 0;
+    min-height: 385px;
+    box-sizing: border-box;
+}
+.sect_six .wrapper {
+    background: #E8E8E8;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    height: 280px;
+}
+.sect_six {
+    float: left;
+    width: 100%;
+}
+.tel_t {
+    float: left;
+    width: 100%;
+    margin-top: 25px;
+}
+.tel_t a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+    display: block;
+}
+.tel_t a {
+    
+    font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 28px;
+
+/* or 175% */
+
+color: #000000;
+}
+a.forms {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    background: #008DD2;
+    box-shadow: 2px 2px 0px #17658B;
+    border-radius: 3px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    padding: 8px 16px;
+}
+.adr_f a {
+    font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 32px;
+
+/* identical to box height, or 200% */
+
+color: #000000;
+}
+.adr_f {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+.adr_f a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    display: block;
+}
+.sect_six .wrapper {
+    background: #E8E8E8;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    height: 360px;
+}
+.w1 {
+    background: url(../images/c1.png) no-repeat 0 center;
+    padding-left: 20px;
+}
+.w2 {
+    background: url(../images/c2.png) no-repeat 0 center;
+    padding-left: 20px;
+}
+.w2 {}

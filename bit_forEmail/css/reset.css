@@ -1,0 +1,1304 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+  margin:0;
+  padding:0;
+ }
+html,body {
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,img { 
+  border:0;
+}
+address,caption,cite,code,dfn,th,var {
+  font-style:normal;
+  font-weight:normal;
+}
+ol,ul {
+  list-style:none;
+}
+caption,th {
+  text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym { border:0;
+}
+section, header{
+  display: block;
+}
+a {text-decoration:none}
+
+
+@font-face{
+    font-family: boldclear; /* Название загруженного шрифта. Это название будем указать в значение свойства font-family у желаемых элементов */
+    src: url("../fonts/ClearSans-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ClearSans-Bold.woff") format("woff"),
+    url("../fonts/ClearSans-Bold.ttf") format("truetype");
+     url("../fonts/ClearSans-Bold.svg#webfont") format("svg");
+}
+
+@font-face{
+    font-family: regclear; /* Название загруженного шрифта. Это название будем указать в значение свойства font-family у желаемых элементов */
+    src: url("../fonts/ClearSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ClearSans-Regular.woff") format("woff"),
+    url("../fonts/ClearSans-Regular.ttf") format("truetype");
+    url("../fonts/ClearSans-Regular.svg#webfont") format("svg");
+}
+ .steps,.lineinfo {
+  -webkit-box-shadow: 2px 2px 11px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    2px 2px 11px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         2px 2px 11px 0px rgba(50, 50, 50, 0.75);
+ }
+
+
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.checkbox + label {
+  cursor: pointer;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:not(checked) + label {
+  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+ 
+   background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+
+ 
+width: 57px;
+height: 32px;
+border-radius: 3px;
+background: #CDD1DA;
+ content: 'Нет';
+text-align: right;
+padding-top: 7px;
+padding-right: 13px;
+color: #4285F4;
+
+}
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkbox:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0px;
+  width: 11px;
+  height: 32px;
+  border-radius: 4px;
+  background: #FFF;
+  transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+
+
+  border: 1px solid #a9a9a9;
+}
+/* Меняем фон чекбокса, когда он включен. */
+.checkbox:checked + label:before {
+  background: #4285F4;
+  width: 57px;
+  content: "Да";
+  color: #fff;
+  text-align: left;
+  padding-left: 15px;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox:checked + label:after {
+  left: 46px;
+}
+/* Показываем получение фокуса. */
+.checkbox:focus + label:before {
+}
+.shad {
+-webkit-box-shadow: inset 3px 3px 6px 0px rgba(50, 50, 50, 0.27);
+-moz-box-shadow:    inset 3px 3px 6px 0px rgba(50, 50, 50, 0.27);
+box-shadow:         inset 3px 3px 6px 0px rgba(50, 50, 50, 0.27);
+}
+.prov {
+  color: rgb(230, 230, 230);
+ 
+font-size: 20px;
+padding: 10px; 
+text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+background: rgb(66, 133, 244);
+background: -moz-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -webkit-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -o-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -ms-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: linear-gradient(6deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+-webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 2px 1px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 2px 1px rgba(50, 50, 50, 0.75);
+
+}
+.prov.active { font-weight:bold;
+  text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 34px;
+-moz-border-radius: 34px;
+border-radius: 34px;
+background: rgb(18, 152, 34);
+background: -moz-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -webkit-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -o-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -ms-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: linear-gradient(6deg, rgb(33, 159, 14) 30%, rgb(70, 225, 78) 62%);
+-webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 2px 1px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 2px 1px rgba(50, 50, 50, 0.75);
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+}
+.plus,.plus1 ,.plus2  {
+  color: rgb(230, 230, 230);
+font-size: 20px;
+padding: 10px; 
+text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+background: rgb(66, 133, 244);
+background: -moz-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -webkit-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -o-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -ms-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: linear-gradient(6deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+-webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 2px 1px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 2px 1px rgba(50, 50, 50, 0.75);
+
+}
+.minus,.minus1,.minus2 {
+  color: rgb(230, 230, 230);
+font-size: 20px;
+padding: 10px;
+text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+background: rgb(66, 133, 244);
+background: -moz-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -webkit-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -o-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: -ms-linear-gradient(96deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+background: linear-gradient(6deg, rgb(66, 133, 244) 30%, rgb(112, 163, 255) 62%);
+-webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 2px 1px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 2px 1px rgba(50, 50, 50, 0.75);
+
+}
+
+ @font-face {
+  font-family: 'SuperShuttle';
+  src: url("../fonts/icomoon.eot?74li5h");
+  src: url("../fonts/icomoon.eot?#iefix74li5h") format('embedded-opentype'),
+    url("../fonts/icomoon.ttf?74li5h") format('truetype'),
+    url("../fonts/icomoon.woff?74li5h") format('woff'),
+    url("../fonts/icomoon.svg?74li5h#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'SuperShuttle';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*ONLY REPLACE THE SECTION BELOW*/
+
+.icon-paper:before {
+  content: "\e900";
+}
+
+.icon-v-card:before {
+  content: "\e603";
+}
+
+.icon-credit-card:before {
+  content: "\e602";
+}
+
+.icon-location:before {
+  content: "\e947";
+}
+
+.icon-clock:before {
+  content: "\e94e";
+}
+
+.icon-info:before {
+  content: "\ea0c";
+}
+
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
+
+.icon-refresh:before {
+  content: "\ea2e";
+}
+
+.icon-arrow-up:before {
+  content: "\ea3b";
+}
+
+.icon-arrow-right:before {
+  content: "\ea3c";
+}
+
+.icon-arrow-down:before {
+  content: "\ea3d";
+}
+
+.icon-pointer-right:before {
+  content: "\ea50";
+}
+
+.icon-bags:before {
+  content: "\e600";
+}
+
+.icon-person:before {
+  content: "\f007";
+}
+
+.icon-hour:before {
+  content: "\f017";
+}
+
+.icon-lock:before {
+  content: "\f023";
+}
+
+.icon-plane:before {
+  content: "\f072";
+}
+
+.icon-pointer-left:before {
+  content: "\f104";
+}
+
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+.icon-angle-up:before {
+  content: "\f106";
+}
+
+.icon-angle-down:before {
+  content: "\f107";
+}
+
+.icon-circle:before {
+  content: "\f111";
+}
+
+.icon-visa:before {
+  content: "\f1f0";
+}
+
+.icon-mastercard:before {
+  content: "\f1f1";
+}
+
+.icon-discover:before {
+  content: "\f1f2";
+}
+
+.icon-amex:before {
+  content: "\f1f3";
+}
+
+.icon-calendar:before {
+  content: "\e601";
+}
+@charset "UTF-8";
+
+@font-face {
+  font-family: "supershuttle";
+  src: url("../fonts/supershuttle.eot");
+  src: url("../fonts/supershuttle.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/supershuttle.woff") format("woff"),
+    url("../fonts/supershuttle.ttf") format("truetype"),
+    url("../fonts/supershuttle.svg#supershuttle") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "supershuttle" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "supershuttle" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-right:before {
+  content: "\61";
+}
+
+.icon-flight:before {
+  content: "\62";
+}
+
+.icon-right-open-big:before {
+  content: "\63";
+}
+
+.icon-torso:before {
+  content: "\64";
+}
+
+.icon-torsos:before {
+  content: "\65";
+}
+
+.icon-torsos-all:before {
+  content: "\66";
+}
+
+.icon-facebook:before {
+  content: "\67";
+}
+
+.icon-twitter-alt:before {
+  content: "\68";
+}
+
+.icon-linkedin:before {
+  content: "\69";
+}
+
+.icon-speedy:before {
+  content: "\6a";
+}
+
+.icon-summary:before {
+  content: "\6b";
+}
+
+.icon-menu:before {
+  content: "\6c";
+}
+
+.icon-wings:before {
+  content: "\6d";
+}
+
+.icon-briefcase:before {
+  content: "\70";
+}
+
+.icon-location:before {
+  content: "\71";
+}
+
+.icon-cog-gear:before {
+  content: "\72";
+}
+
+.icon-info-circled:before {
+  content: "\73";
+}
+
+.icon-calendar:before {
+  content: "\74";
+}
+
+.icon-exchange:before {
+  content: "\75";
+}
+
+.icon-search:before {
+  content: "\76";
+}
+
+.icon-plus:before {
+  content: "\77";
+}
+
+.icon-minus:before {
+  content: "\78";
+}
+
+.icon-work-together:before {
+  content: "\79";
+}
+
+.icon-contact:before {
+  content: "\7a";
+}
+
+.icon-clock:before {
+  content: "\41";
+}
+
+.icon-check-1:before {
+  content: "\42";
+}
+
+.icon-x:before {
+  content: "\43";
+}
+
+.icon-location-arrow:before {
+  content: "\44";
+}
+
+.icon-rail:before {
+  content: "\45";
+}
+
+.icon-apple:before {
+  content: "\46";
+}
+
+.icon-anchor:before {
+  content: "\47";
+}
+
+.icon-android:before {
+  content: "\48";
+}
+
+.icon-anchor-1:before {
+  content: "\49";
+}
+
+.icon-anchor-2:before {
+  content: "\4a";
+}
+
+.icon-transportation-ship:before {
+  content: "\4b";
+}
+
+.icon-github-alt:before {
+  content: "\4c";
+}
+
+.icon-angle-down:before {
+  content: "\4d";
+}
+
+.icon-usa:before {
+  content: "\4f";
+}
+
+.icon-cake-lie:before {
+  content: "\50";
+}
+
+.icon-angle-up:before {
+  content: "\51";
+}
+
+.icon-angle-left:before {
+  content: "\52";
+}
+
+.icon-pen:before {
+  content: "\53";
+}
+
+.icon-log-out:before {
+  content: "\54";
+}
+
+.icon-quote-left:before {
+  content: "\55";
+}
+
+.icon-wallet-1:before {
+  content: "\57";
+}
+
+.icon-image:before {
+  content: "\58";
+}
+
+.icon-mail-1:before {
+  content: "\59";
+}
+
+.icon-eye:before {
+  content: "\5a";
+}
+
+.icon-phone:before {
+  content: "\30";
+}
+
+.icon-sync:before {
+  content: "\31";
+}
+
+.icon-heart:before {
+  content: "\32";
+}
+
+.icon-favorite:before {
+  content: "\33";
+}
+
+.icon-arrow-left:before {
+  content: "\35";
+}
+
+.icon-log-in:before {
+  content: "\36";
+}
+
+.icon-warning:before {
+  content: "\37";
+}
+
+.icon-message-bubble:before {
+  content: "\38";
+}
+
+.icon-arrow-connect:before {
+  content: "\39";
+}
+
+.icon-vehicle-generic:before {
+  content: "\21";
+}
+
+.icon-location-pin:before {
+  content: "\22";
+}
+
+.icon-mytrips-inactive:before {
+  content: "\23";
+}
+
+.icon-mytrips-active:before {
+  content: "\24";
+}
+
+.icon-vehicle-suv:before {
+  content: "\25";
+}
+
+.icon-vehicle-bus:before {
+  content: "\26";
+}
+
+.icon-vehicle-ssvan:before {
+  content: "\27";
+}
+
+.icon-vehicle-van:before {
+  content: "\28";
+}
+
+.icon-vehicle-superx:before {
+  content: "\29";
+}
+
+.icon-vehicle-sedan:before {
+  content: "\2a";
+}
+
+.icon-dots-android:before {
+  content: "\2b";
+}
+
+.icon-dots-iphone:before {
+  content: "\2c";
+}
+
+.icon-vehicle-hybrid:before {
+  content: "\2d";
+}
+
+.icon-vehicle-luxury:before {
+  content: "\2e";
+}
+
+.icon-point-to-point:before {
+  content: "\2f";
+}
+
+.icon-happy:before {
+  content: "\3a";
+}
+
+.icon-sad:before {
+  content: "\3b";
+}
+
+.icon-arrow-drop:before {
+  content: "\3c";
+}
+
+.icon-view-list:before {
+  content: "\3d";
+}
+
+.icon-view-map:before {
+  content: "\3e";
+}
+
+.icon-web-edit:before {
+  content: "\3f";
+}
+
+.icon-fare-quote:before {
+  content: "\40";
+}
+
+.icon-bags:before {
+  content: "\5b";
+}
+
+.icon-support-ring:before {
+  content: "\5d";
+}
+
+.icon-airport:before {
+  content: "\5e";
+}
+
+.icon-arrow-right:before {
+  content: "\5f";
+}
+
+.icon-vallet:before {
+  content: "\60";
+}
+
+.icon-arrow-drop2:before {
+  content: "\7b";
+}
+
+.icon-arrow-up:before {
+  content: "\7c";
+}
+
+.icon-star-off:before {
+  content: "\7d";
+}
+
+.icon-star-on:before {
+  content: "\7e";
+}
+
+.icon-pin-down:before {
+  content: "\5c";
+}
+
+.icon-pin-up:before {
+  content: "\e000";
+}
+
+.icon-trash:before {
+  content: "\e001";
+}
+
+.icon-unlock:before {
+  content: "\e002";
+}
+
+.icon-lock:before {
+  content: "\e003";
+}
+
+.icon-share:before {
+  content: "\e004";
+}
+
+.icon-concierge:before {
+  content: "\e005";
+}
+
+.icon-stadium:before {
+  content: "\e006";
+}
+
+.icon-train:before {
+  content: "\e007";
+}
+
+.icon-ford:before {
+  content: "\e008";
+}
+
+.icon-fusion:before {
+  content: "\e009";
+}
+
+.icon-edge:before {
+  content: "\e00a";
+}
+
+.icon-mustang:before {
+  content: "\e00b";
+}
+
+.icon-f-150:before {
+  content: "\e00c";
+}
+
+.icon-arrow-pop:before {
+  content: "\e00d";
+}
+
+.icon-voucher:before {
+  content: "\e00e";
+}
+
+.icon-fare-ticket:before {
+  content: "\e00f";
+}
+
+.icon-phone-1:before {
+  content: "\e010";
+}
+
+.icon-ios-help:before {
+  content: "\34";
+}
+
+.icon-location-permission:before {
+  content: "\e011";
+}
+
+.icon-flag-usa:before {
+  content: "\e012";
+}
+
+.icon-flag-france:before {
+  content: "\e013";
+}
+
+.icon-flag-sweden:before {
+  content: "\e014";
+}
+
+.icon-paperclip-android:before {
+  content: "\e016";
+}
+
+.icon-paperclip-iossvg:before {
+  content: "\e017";
+}
+
+.icon-childseat:before {
+  content: "\e015";
+}
+
+.icon-booster-seat:before {
+  content: "\e018";
+}
+
+.icon-d2g-plane:before {
+  content: "\e019";
+}
+
+.icon-to-airport:before {
+  content: "\6e";
+}
+
+.icon-globe:before {
+  content: "\4e";
+}
+
+.icon-home:before {
+  content: "\56";
+}
+
+.icon-from-airport:before {
+  content: "\6f";
+}
+/* 6975cca9-ddd7-4370-a133-0a00b8540f31 */
+
+@font-face {
+  font-family: 'supershuttle';
+  src: url("../../../../Content/css/mobiscroll/icons_mobiscroll.eot?vmfz1h");
+  src: url("../../../../Content/css/mobiscroll/icons_mobiscroll.eot?#iefixvmfz1h") format('embedded-opentype'), url("../../../../Content/css/mobiscroll/icons_mobiscroll.ttf?vmfz1h") format('truetype'), url("../../../../Content/css/mobiscroll/icons_mobiscroll.woff?vmfz1h") format('woff'), url("../../../../Content/css/mobiscroll/icons_mobiscroll.woff") format('woff'),url("../../../../Content/css/mobiscroll/icons_mobiscroll.svg?vmfz1h#icons_mobiscroll") format('svg');
+  font-style: normal;
+}
+
+.mbsc-ic:before {
+  font-family: 'supershuttle';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mbsc-ic-aid:before {
+  content: "\f100";
+}
+
+.mbsc-ic-airplane:before {
+  content: "\f101";
+}
+
+.mbsc-ic-alarm2:before {
+  content: "\f102";
+}
+
+.mbsc-ic-arrow-down5:before {
+  content: "\f103";
+}
+
+.mbsc-ic-arrow-down6:before {
+  content: "\f104";
+}
+
+.mbsc-ic-arrow-left2:before {
+  content: "\f105";
+}
+
+.mbsc-ic-arrow-left5:before {
+  content: "\52";
+}
+
+.mbsc-ic-arrow-left6:before {
+  content: "\52";
+}
+
+.mbsc-ic-arrow-right2:before {
+  content: "\f108";
+}
+
+.mbsc-ic-arrow-right5:before {
+  content: "\61";
+}
+
+.mbsc-ic-arrow-right6:before {
+  content: "\61";
+}
+
+.mbsc-ic-arrow-up5:before {
+  content: "\f10b";
+}
+
+.mbsc-ic-arrow-up6:before {
+  content: "\f10c";
+}
+
+.mbsc-ic-attachment:before {
+  content: "\f10d";
+}
+
+.mbsc-ic-bars:before {
+  content: "\f10e";
+}
+
+.mbsc-ic-book:before {
+  content: "\f10f";
+}
+
+.mbsc-ic-bubble:before {
+  content: "\f110";
+}
+
+.mbsc-ic-bubbles:before {
+  content: "\f111";
+}
+
+.mbsc-ic-bullhorn:before {
+  content: "\f112";
+}
+
+.mbsc-ic-calendar:before {
+  content: "\f113";
+}
+
+.mbsc-ic-camera:before {
+  content: "\f114";
+}
+
+.mbsc-ic-cart:before {
+  content: "\f115";
+}
+
+.mbsc-ic-checkmark:before {
+  content: "\f116";
+}
+
+.mbsc-ic-clock:before {
+  content: "\f117";
+}
+
+.mbsc-ic-close:before {
+  content: "\f118";
+}
+
+.mbsc-ic-cloud-download:before {
+  content: "\f119";
+}
+
+.mbsc-ic-cloud-upload:before {
+  content: "\f11a";
+}
+
+.mbsc-ic-cogs:before {
+  content: "\f11b";
+}
+
+.mbsc-ic-connection:before {
+  content: "\f11c";
+}
+
+.mbsc-ic-copy2:before {
+  content: "\f11d";
+}
+
+.mbsc-ic-copy3:before {
+  content: "\f11e";
+}
+
+.mbsc-ic-credit:before {
+  content: "\f11f";
+}
+
+.mbsc-ic-disk:before {
+  content: "\f120";
+}
+
+.mbsc-ic-download:before {
+  content: "\f121";
+}
+
+.mbsc-ic-drawer:before {
+  content: "\f122";
+}
+
+.mbsc-ic-droplet:before {
+  content: "\f123";
+}
+
+.mbsc-ic-earth:before {
+  content: "\f124";
+}
+
+.mbsc-ic-eye:before {
+  content: "\f125";
+}
+
+.mbsc-ic-eye-blocked:before {
+  content: "\f126";
+}
+
+.mbsc-ic-fa-leaf:before {
+  content: "\f127";
+}
+
+.mbsc-ic-fa-rotate-left:before {
+  content: "\f128";
+}
+
+.mbsc-ic-file4:before {
+  content: "\f129";
+}
+
+.mbsc-ic-flag:before {
+  content: "\f12a";
+}
+
+.mbsc-ic-folder:before {
+  content: "\f12b";
+}
+
+.mbsc-ic-forward:before {
+  content: "\f12c";
+}
+
+.mbsc-ic-foundation-minus-circle:before {
+  content: "\f12d";
+}
+
+.mbsc-ic-globe:before {
+  content: "\f12e";
+}
+
+.mbsc-ic-heart:before {
+  content: "\f12f";
+}
+
+.mbsc-ic-history:before {
+  content: "\f130";
+}
+
+.mbsc-ic-home:before {
+  content: "\f131";
+}
+
+.mbsc-ic-image2:before {
+  content: "\f132";
+}
+
+.mbsc-ic-ion-android-system-windows:before {
+  content: "\f133";
+}
+
+.mbsc-ic-ion-bluetooth:before {
+  content: "\f134";
+}
+
+.mbsc-ic-ion-ios7-checkmark-empty:before {
+  content: "\f135";
+}
+
+.mbsc-ic-key2:before {
+  content: "\f136";
+}
+
+.mbsc-ic-library:before {
+  content: "\f137";
+}
+
+.mbsc-ic-link:before {
+  content: "\f138";
+}
+
+.mbsc-ic-location:before {
+  content: "\f139";
+}
+
+.mbsc-ic-lock2:before {
+  content: "\f13a";
+}
+
+.mbsc-ic-loop2:before {
+  content: "\f13b";
+}
+
+.mbsc-ic-map:before {
+  content: "\f13c";
+}
+
+.mbsc-ic-material-backspace:before {
+  content: "\f13d";
+}
+
+.mbsc-ic-material-check-box-outline-blank:before {
+  content: "\f13e";
+}
+
+.mbsc-ic-material-keyboard-arrow-down:before {
+  content: "\f13f";
+}
+
+.mbsc-ic-material-keyboard-arrow-left:before {
+  content: "\f140";
+}
+
+.mbsc-ic-material-keyboard-arrow-right:before {
+  content: "\f141";
+}
+
+.mbsc-ic-material-keyboard-arrow-up:before {
+  content: "\f142";
+}
+
+.mbsc-ic-material-star:before {
+  content: "\f143";
+}
+
+.mbsc-ic-material-star-outline:before {
+  content: "\f144";
+}
+
+.mbsc-ic-minus:before {
+  content: "\f145";
+}
+
+.mbsc-ic-mobile:before {
+  content: "\f146";
+}
+
+.mbsc-ic-newspaper:before {
+  content: "\f147";
+}
+
+.mbsc-ic-office:before {
+  content: "\f148";
+}
+
+.mbsc-ic-pencil:before {
+  content: "\f149";
+}
+
+.mbsc-ic-phone:before {
+  content: "\f14a";
+}
+
+.mbsc-ic-play:before {
+  content: "\f14b";
+}
+
+.mbsc-ic-plus:before {
+  content: "\f14c";
+}
+
+.mbsc-ic-redo2:before {
+  content: "\f14d";
+}
+
+.mbsc-ic-remove:before {
+  content: "\f14e";
+}
+
+.mbsc-ic-reply:before {
+  content: "\f14f";
+}
+
+.mbsc-ic-sad2:before {
+  content: "\f150";
+}
+
+.mbsc-ic-smiley2:before {
+  content: "\f151";
+}
+
+.mbsc-ic-stack:before {
+  content: "\f152";
+}
+
+.mbsc-ic-star3:before {
+  content: "\f153";
+}
+
+.mbsc-ic-stopwatch:before {
+  content: "\f154";
+}
+
+.mbsc-ic-support:before {
+  content: "\f155";
+}
+
+.mbsc-ic-tag:before {
+  content: "\f156";
+}
+
+.mbsc-ic-thumbs-up:before {
+  content: "\f157";
+}
+
+.mbsc-ic-thumbs-up2:before {
+  content: "\f158";
+}
+
+.mbsc-ic-undo2:before {
+  content: "\f159";
+}
+
+.mbsc-ic-unlocked:before {
+  content: "\f15a";
+}
+
+.mbsc-ic-upload:before {
+  content: "\f15b";
+}
+
+.mbsc-ic-user4:before {
+  content: "\f15c";
+}
+
+.mbsc-ic-volume-medium:before {
+  content: "\f15d";
+}
+.timepicker {width: 100px  !important}
+.datepicker {width: 300px !important}
+.bootstrap-datetimepicker-widget td.day {
+    height: 25px;
+    line-height: 20px;
+    width: 20px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    text-align: right;
+}
+.table-condensed thead {}
+.table-condensed thead {
+    background: #4285F4;
+    color: #FFF;
+}
+.bootstrap-datetimepicker-widget.timepicker-sbs {
+    width: 450px  !important;
+}
+
+.bootstrap-datetimepicker-widget td.active, .bootstrap-datetimepicker-widget td.active:hover {
+    background-color: #4285F4;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+    border-radius: 0;
+}
+
+th.next ,.picker-switch{
+    margin-top: 0;
+    background: none !important;
+}
+th.prev {
+    margin-top: 0;
+    background: none !important;
+}
